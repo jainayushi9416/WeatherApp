@@ -42,6 +42,13 @@ function showWeatherReport(weather){
     let weatherType = document.getElementById('weather');
     weatherType.innerText = `${weather.weather[0].main}`;
 
+    let humid = document.getElementById('humidity');
+    humid.innerHTML = `Humidity:${weather.main.humidity}%`;
+    let pre = document.getElementById('pressure');
+    pre.innerHTML = `Pressure:${weather.main.pressure}hPa`;
+    
+
+
     let date = document.getElementById('date');
     let todayDate = new Date();
     date.innerText = dateManage(todayDate);
